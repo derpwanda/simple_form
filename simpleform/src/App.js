@@ -1,11 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router } from "react-router-dom";
-import './App.css';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Form from "./components/form";
 
 function App() {
   return (
     <div className="App">
-      <p>barebones</p>
+      <BrowserRouter>
+        <Link to='/'>Home</Link>
+        <Link to='/form'>Form</Link>
+
+        <Route path="/form" component={Form} />
+      </BrowserRouter>
     </div>
   );
 }
