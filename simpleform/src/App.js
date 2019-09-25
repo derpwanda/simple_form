@@ -8,9 +8,15 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Link to='/'>Home</Link>
-        <Link to='/about'>About</Link>
-        <Link to='/form'>Form</Link>
+        <div>
+          <ul>
+            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/form'>Form</Link></li>
+            <li><Link to='/'>Home</Link></li>
+          </ul>
+        </div>
+
+        <hr />
 
         <Route exact path="/" component={Home} />
         <Route path='/about' component={About} />
